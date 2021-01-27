@@ -27,10 +27,10 @@ class Game {
     image(groundImage, 0, windowHeight / 2, windowWidth, windowHeight / 2);
     image(groundImage, 0, -windowHeight * 15, windowWidth, windowHeight / 2);
     bike.velocityY = -5;
-    if (keyDown(LEFT_ARROW) || touches.length[0][0] < windowWidth / 2) {
+    if (keyDown(LEFT_ARROW) || ( touches.length > 0)) {
       bike.velocityX = -5;
       touches = [];
-    } else if (keyDown(RIGHT_ARROW) || touches.length[0][0] > windowWidth / 2) {
+    } else if (keyDown(RIGHT_ARROW) || ( touches.length > 0)) {
       bike.velocityX = 5;
       touches = [];
     }
@@ -70,3 +70,4 @@ class Game {
     }
   }
 }
+
